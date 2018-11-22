@@ -160,13 +160,13 @@ class Feed
 	 * @param string $description
 	 * @param string $content
 	 * @param array $enclosure (optional)
-	 * @param string $category (optional)
+	 * @param string $categories (optional)
 	 * @param string $subtitle (optional)
      * @param string $duration (optional)
 	 *
 	 * @return void
 	 */
-	public function add($title, $author, $link, $pubdate, $description, $content='', $enclosure = [], $category='', $subtitle='', $duration ='')
+	public function add($title, $author, $link, $pubdate, $description, $content='', $enclosure = [], $categories = [], $subtitle='', $duration ='')
 	{
 		// append ... to description
 		$append = '';
@@ -189,9 +189,9 @@ class Feed
 			'description' => $description,
 			'content' => $content,
 			'enclosure' => $enclosure,
-			'category' => $category,
+			'categories' => $categories,
 			'subtitle' => $subtitle,
-            'duration' => $duration
+            		'duration' => $duration
 		]);
 	}
 
